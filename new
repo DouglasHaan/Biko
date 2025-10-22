@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BIKO American Cuisine – Gourmet Burgers on Wheels</title>
+  <meta name="description" content="Gourmet burgers, stacked sandwiches, and golden fries — proudly served with American pride across Eagle Mountain, Utah. Order on Toast." />
+</head>
+<body style="margin:0">
+<!-- Biko American Cuisine — Wix-aligned, mobile-first, no external files -->
+<section class="bk" style="--blue:#0f2a6b;--blue2:#1e3a8a;--red:#e11d48;--ink:#0b1220;--line:#e5e7eb;--radius:14px;--max:1000px; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:#fff; background:var(--blue); margin:0; padding:0;">
+  <style>
+    /* Scope to .bk to avoid Wix collisions */
+    .bk, .bk *{box-sizing:border-box}
+    .bk a{text-decoration:none}
+    .bk :where(h1,h2,h3,h4,p){margin:0}
+
+    /* Containers */
+    .bk-wrap{max-width:var(--max);margin:0 auto;padding:64px 18px}
+    .bk-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .bk-stack-2{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+    .bk-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);color:var(--ink);box-shadow:0 6px 16px rgba(2,6,23,.08)}
+    .bk-card > * {max-width:100%}
+    .bk-pill{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--red);background:#fff;color:var(--blue);border-radius:12px;padding:10px 14px;font-weight:900;letter-spacing:.4px;font-size:22px}
+    .bk-title{font-weight:900;font-size:26px;color:var(--blue)}
+    .bk-btn{display:inline-flex;align-items:center;justify-content:center;font-weight:800;border-radius:12px;padding:12px 16px;white-space:nowrap;transition:transform .08s ease, box-shadow .15s}
+    .bk-btn:active{transform:scale(.98)}
+    .bk-btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(225,29,72,.28)}
+    .bk-btn-ghost{border:2px solid #fff;color:#fff;background:transparent}
+    .bk-underline{height:4px;background:linear-gradient(90deg,var(--red),#ff6b8a);border-radius:2px}
+
+    /* Big dividers for section separation */
+    .bk-divider{height:14px;background:repeating-linear-gradient(90deg,#ffffff 0 22px, #e5e7eb 22px 44px)}
+    .bk-divider.dark{background:repeating-linear-gradient(90deg,#091a44 0 22px, #10265e 22px 44px)}
+    .bk-gap{height:24px}
+
+    /* Header (optional sticky: uncomment position + top) */
+    .bk-header{background:#fff;border-bottom:4px solid var(--red);width:100%;
+      /* position:sticky; top:0; z-index:50; */ }
+    .bk-header-in{max-width:var(--max);margin:0 auto;padding:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+    .bk-nav{display:flex;gap:8px;flex-wrap:wrap}
+    /* Ghost buttons on white header for contrast */
+    .bk-header .bk-btn-ghost{border-color:var(--blue);color:var(--blue)}
+    .bk-header .bk-btn-ghost:hover{border-color:var(--red);color:var(--red)}
+
+    /* Anchor offset so header doesn't cover titles */
+    .bk :target{scroll-margin-top:96px}
+
+    /* Hero */
+    .bk-hero{text-align:center}
+    .bk-hero h1{font-size:clamp(30px,6vw,50px);line-height:1.1;margin:0 0 12px;font-weight:900}
+    .bk-hero p{max-width:740px;margin:0 auto 18px;color:#f8fafc}
+    .bk-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .bk-kpi{border:1px solid var(--red);border-radius:12px;background:#fff;color:var(--ink);padding:12px 10px;text-align:center}
+    .bk-kpi b{display:block;font-size:22px;color:var(--red)}
+
+    /* Section heads */
+    .bk-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px}
+    .bk-head h2{font-size:clamp(22px,4.5vw,32px);margin:0 0 6px 0;color:#fff}
+
+    /* Alternating section backgrounds for separation */
+    .bk-section--dark{background:linear-gradient(180deg,#0f2a6b 0%, #0a1d4f 100%)}
+    .bk-section--light{background:#fff;color:var(--ink)}
+
+    /* Menu */
+    .bk-menu-sec .bk-head h2{color:#0f172a}
+    .bk-cat{font-weight:900;margin:18px 0 8px;color:#0f172a}
+    .bk-menu-grid{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+    .bk-menu-item{border:1px dashed #d1d5db;border-radius:12px;padding:12px;background:#fff}
+    .bk-menu-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .bk-price{color:var(--red);font-weight:900}
+
+    /* About / Story */
+    .bk-about{position:relative; isolation:isolate; background:#1e3a8a}
+    .bk-story{display:grid;gap:14px;grid-template-columns:1.1fr .9fr; align-items:start}
+    .bk-story .bk-card{padding:18px; display:block; width:100%; overflow:visible}
+    .bk-quote{font-style:italic;color:#e5e7eb}
+    .bk-about :where(p,h3,li){color:#f3f6ff}
+
+    /* Community */
+    .bk-locs{background:#16306c}
+    .bk-locs p{color:#f8fafc}
+    .bk-badges{display:flex;gap:8px;flex-wrap:wrap}
+    .bk-badge{border:1px solid #c7d2fe;background:#eef2ff;color:#1e3a8a;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}
+
+    /* Footer */
+    .bk-footer{background:#0a1d4f;text-align:center;font-size:14px}
+
+    /* Floating Call button (mobile-first) */
+    .bk-float-call{
+      position:fixed;right:14px;bottom:14px;z-index:60;
+      display:inline-flex;align-items:center;gap:8px;
+      background:#10b981;color:#fff;border-radius:999px;
+      padding:12px 16px;font-weight:800;box-shadow:0 12px 24px rgba(0,0,0,.25)
+    }
+    .bk-float-call span{display:inline-block}
+    @media (min-width:861px){
+      .bk-float-call{bottom:24px;right:24px}
+    }
+
+    /* Mobile helpers */
+    @media (max-width:860px){
+      .bk-wrap{padding:52px 18px}
+      .bk-stack-2{grid-template-columns:1fr}
+      .bk-menu-grid{grid-template-columns:1fr}
+      .bk-kpis{grid-template-columns:1fr 1fr}
+      .bk-header-in{justify-content:center;text-align:center}
+      .bk-nav{justify-content:center}
+      .bk-story{display:block}
+      .bk-story .bk-card{margin-bottom:12px}
+    }
+    @media (max-width:520px){
+      .bk-kpis{grid-template-columns:1fr 1fr}
+      .bk-title{font-size:22px}
+    }
+  </style>
+
+  <!-- HEADER -->
+  <header class="bk-header" role="banner" aria-label="Site header">
+    <div class="bk-header-in">
+      <div class="bk-row" style="gap:14px">
+        <span class="bk-pill" aria-label="Biko logo">BIKO</span>
+        <span class="bk-title">American Cuisine</span>
+      </div>
+      <nav class="bk-nav" role="navigation" aria-label="Primary">
+        <!-- All buttons go to Toast -->
+        <a class="bk-btn bk-btn-ghost" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Menu</a>
+        <a class="bk-btn bk-btn-ghost" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Order Now</a>
+        <a class="bk-btn bk-btn-primary" href="tel:3855106811" aria-label="Call now">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- DIVIDER -->
+  <div class="bk-divider" aria-hidden="true"></div>
+
+  <!-- HERO -->
+  <section class="bk-hero bk-wrap" id="home">
+    <h1>Gourmet Burgers <span style="color:var(--red)">on Wheels</span></h1>
+    <p>Gourmet burgers, stacked sandwiches, and golden fries — proudly served with American pride across Eagle Mountain.</p>
+    <div class="bk-row" style="justify-content:center;margin-top:10px">
+      <a class="bk-btn bk-btn-primary" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">See Full Menu</a>
+      <a class="bk-btn bk-btn-ghost" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Catering</a>
+    </div>
+    <div class="bk-kpis" role="list">
+      <div class="bk-kpi" role="listitem"><b>30+ Years</b><span>Chef Experience</span></div>
+      <div class="bk-kpi" role="listitem"><b>1000s</b><span>Happy Guests</span></div>
+      <div class="bk-kpi" role="listitem"><b>5★</b><span>Local Favorite</span></div>
+    </div>
+  </section>
+
+  <!-- DIVIDER + spacer -->
+  <div class="bk-divider dark" aria-hidden="true"></div>
+  <div class="bk-gap" aria-hidden="true"></div>
+
+  <!-- ORDER STRIP (light for contrast) -->
+  <section class="bk-section--light">
+    <div class="bk-wrap bk-card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <p style="margin:0;color:#111827;font-weight:700">Order pickup now or schedule ahead.</p>
+      <div class="bk-row">
+        <a class="bk-btn bk-btn-primary" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Order on Toast</a>
+        <a class="bk-btn" style="border:2px solid var(--red);color:var(--red)" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">View Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER + spacer -->
+  <div class="bk-divider" aria-hidden="true"></div>
+  <div class="bk-gap" aria-hidden="true"></div>
+
+  <!-- MENU (light) -->
+  <section id="menu" class="bk-menu-sec bk-section--light">
+    <div class="bk-wrap">
+      <div class="bk-head">
+        <div>
+          <h2>Full Menu</h2>
+          <div class="bk-underline"></div>
+        </div>
+        <a class="bk-btn bk-btn-primary" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Order Now</a>
+      </div>
+
+      <div class="bk-cat">Combos (Burger + Fries + Drink)</div>
+      <div class="bk-menu-grid">
+        <div class="bk-menu-item">
+          <div class="bk-menu-top"><strong>Combo Bacon Cheeseburger</strong><span class="bk-price">$17.00</span></div>
+          <p style="margin:.4rem 0 0;color:#0f172a">Crisp bacon, American cheese, pickles, house sauce. Includes fries & drink.</p>
+        </div>
+        <div class="bk-menu-item">
+          <div class="bk-menu-top"><strong>Combo Double Cheeseburger</strong><span class="bk-price">$17.00</span></div>
+          <p style="margin:.4rem 0 0;color:#0f172a">Two juicy patties, double cheese, Biko sauce. Includes fries & drink.</p>
+        </div>
+        <div class="bk-menu-item">
+          <div class="bk-menu-top"><strong>Mushroom Swiss Burger</strong><span class="bk-price">$17.00</span></div>
+          <p style="margin:.4rem 0 0;color:#0f172a">Sautéed mushrooms, Swiss, caramelized onions, garlic aioli.</p>
+        </div>
+        <div class="bk-menu-item">
+          <div class="bk-menu-top"><strong>Quarter Pound Cheeseburger</strong><span class="bk-price">$14.00</span></div>
+          <p style="margin:.4rem 0 0;color:#0f172a">Classic quarter-pound, American cheese, lettuce, tomato, pickles.</p>
+        </div>
+      </div>
+
+      <div class="bk-cat">Fries & Sides</div>
+      <div class="bk-menu-grid">
+        <div class="bk-menu-item">
+          <div class="bk-menu-top"><strong>Garlic Fries</strong><span class="bk-price">$6.00</span></div>
+          <p style="margin:.4rem 0 0;color:#0f172a">Hand-cut fries tossed in garlic butter & parsley.</p>
+        </div>
+        <div class="bk-menu-item">
+          <div class="bk-menu-top"><strong>Plain Fries</strong><span class="bk-price">$6.00</span></div>
+          <p style="margin:.4rem 0 0;color:#0f172a">Crispy, golden, and perfect with our house dipping sauces.</p>
+        </div>
+      </div>
+
+      <div class="bk-cat">Drinks</div>
+      <div class="bk-menu-grid">
+        <div class="bk-menu-item">
+          <div class="bk-menu-top"><strong>Soda / Water</strong><span class="bk-price">$2.00–$3.00</span></div>
+          <p style="margin:.4rem 0 0;color:#0f172a">Assorted canned sodas and bottled water.</p>
+        </div>
+      </div>
+
+      <div class="bk-row" style="justify-content:center;margin-top:16px">
+        <a class="bk-btn bk-btn-primary" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Order for Pickup</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER + spacer -->
+  <div class="bk-divider dark" aria-hidden="true"></div>
+  <div class="bk-gap" aria-hidden="true"></div>
+
+  <!-- ABOUT (dark) -->
+  <section id="about" class="bk-about">
+    <div class="bk-wrap">
+      <div class="bk-head">
+        <div>
+          <h2>About Chef Noel</h2>
+          <div class="bk-underline"></div>
+        </div>
+        <a class="bk-btn bk-btn-primary" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Order Now</a>
+      </div>
+
+      <div class="bk-story">
+        <!-- Story Card -->
+        <div class="bk-card" style="margin-bottom:12px;background:#0f1f58;color:#f3f6ff;border-color:#213a8f">
+          <h3 style="margin:0 0 8px;">30 Years in the Kitchen, Still Cooking with Heart</h3>
+          <p class="bk-quote">“After three decades cooking for families, teams, and neighbors, I wanted to bring a fresh,
+            uniquely American food truck experience to Eagle Mountain—food that’s honest, hearty, and crafted with care.”</p>
+          <p>That vision became <strong>BIKO American Cuisine</strong>, led by <strong>Chef Noel</strong>—a red-white-and-blue truck
+            serving gourmet burgers, stacked sandwiches, and fries done right. Every menu item is built on fundamentals:
+            quality ingredients, consistent technique, and seasoning that lets the food shine.</p>
+          <p>From weekday lunches to Friday-night lights, our goal is simple:
+            <strong>serve great food that brings people together</strong>. Thanks for welcoming us—we’re proud to call this community home.</p>
+          <ul style="margin:10px 0 0 18px; line-height:1.6">
+            <li>Signature moves: sear-first patties, house Biko sauce, garlic-parsley fry finish</li>
+            <li>Values: fast lines, bold flavor, warm hospitality</li>
+            <li>Community: schools, parks, markets, and local fundraisers</li>
+          </ul>
+        </div>
+
+        <!-- Badges / CTA Card -->
+        <div class="bk-card" style="padding:18px; margin-bottom:12px;">
+          <div class="bk-badges" style="margin-bottom:10px">
+            <span class="bk-badge">Chef-Led</span>
+            <span class="bk-badge">Made-to-Order</span>
+            <span class="bk-badge">Family-Owned</span>
+            <span class="bk-badge">Local Favorite</span>
+          </div>
+          <div style="border:1px dashed #cbd5e1;border-radius:12px;padding:14px;background:#f8fafc;margin-bottom:10px;color:#0f172a">
+            <strong>Pro Tip:</strong> Hosting a crowd? Ask about our <em>event menu</em> with bulk fries and burger kits.
+          </div>
+          <a class="bk-btn bk-btn-primary" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Ask About Catering</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER + spacer -->
+  <div class="bk-divider" aria-hidden="true"></div>
+  <div class="bk-gap" aria-hidden="true"></div>
+
+  <!-- COMMUNITY (dark-mid) -->
+  <section id="community" class="bk-locs">
+    <div class="bk-wrap">
+      <div class="bk-head">
+        <div>
+          <h2>Proudly Serving Eagle Mountain, Utah</h2>
+          <div class="bk-underline"></div>
+        </div>
+        <a class="bk-btn bk-btn-primary" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Today’s Hours</a>
+      </div>
+      <p style="max-width:800px;margin:0 0 14px">
+        You’ll spot us around The Ranches, City Center, and at neighborhood parks, school events, and weekend markets.
+        We post our weekly schedule on Instagram—swing by for lunch, dinner, or a well-earned post-round bite after the
+        Ranches Golf Club.
+      </p>
+      <div class="bk-row" style="justify-content:space-between">
+        <div class="bk-badges">
+          <span class="bk-badge">The Ranches</span>
+          <span class="bk-badge">City Center</span>
+          <span class="bk-badge">Local Events</span>
+          <span class="bk-badge">Parks & Schools</span>
+        </div>
+        <a class="bk-btn bk-btn-ghost" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER + spacer -->
+  <div class="bk-divider dark" aria-hidden="true"></div>
+  <div class="bk-gap" aria-hidden="true"></div>
+
+  <!-- CATERING (dark gradient) -->
+  <section id="catering" class="bk-section--dark">
+    <div class="bk-wrap">
+      <div class="bk-head">
+        <div>
+          <h2>Bring Biko to Your Event</h2>
+          <div class="bk-underline"></div>
+        </div>
+        <a class="bk-btn bk-btn-primary" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Check Dates</a>
+      </div>
+      <div class="bk-stack-2">
+        <div class="bk-card" style="padding:16px">
+          <h4 style="margin:0 0 6px;color:#0f172a">Corporate Lunches</h4>
+          <p style="margin:0;color:#0f172a">Fast service, set menus, custom tickets—great for teams big and small.</p>
+        </div>
+        <div class="bk-card" style="padding:16px">
+          <h4 style="margin:0 0 6px;color:#0f172a">School & Community</h4>
+          <p style="margin:0;color:#0f172a">Fundraisers, games, festivals—we’ll tailor the menu to fit the crowd.</p>
+        </div>
+        <div class="bk-card" style="padding:16px">
+          <h4 style="margin:0 0 6px;color:#0f172a">Private Events</h4>
+          <p style="margin:0;color:#0f172a">Birthdays, reunions, and weddings—ask about per-guest pricing.</p>
+        </div>
+        <div class="bk-card" style="padding:16px">
+          <h4 style="margin:0 0 6px;color:#0f172a">Neighborhood Nights</h4>
+          <p style="margin:0;color:#0f172a">Block parties and HOA events—easy booking, reliable service.</p>
+        </div>
+      </div>
+      <div class="bk-row" style="justify-content:center;margin-top:14px">
+        <a class="bk-btn bk-btn-primary" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Order Catering</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="bk-divider" aria-hidden="true"></div>
+
+  <!-- FOOTER -->
+  <footer class="bk-footer">
+    <div class="bk-wrap" style="padding:28px 18px 64px">
+      <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+        <span class="bk-pill">BIKO</span>
+        <span style="font-weight:800">American Cuisine</span>
+      </div>
+      <div class="bk-row" style="justify-content:center;gap:10px">
+        <a class="bk-btn bk-btn-primary" href="tel:3855106811" aria-label="Call now">Call Now</a>
+        <a class="bk-btn bk-btn-ghost" href="https://www.toasttab.com/local/order/biko-american-cuisine/r-bfd7a693-4283-4d84-aa7d-cbddbee0d6c6" target="_blank" rel="noopener">Order on Toast</a>
+      </div>
+      <p style="margin:10px 0 0;color:#cbd5e1">© 2025 Biko American Cuisine • Eagle Mountain, Utah</p>
+    </div>
+  </footer>
+
+  <!-- Floating Call Now (mobile-first) -->
+  <a class="bk-float-call" href="tel:3855106811" aria-label="Call Biko American Cuisine">
+    <span>📞</span><span>Call Now</span>
+  </a>
+</section>
+</body>
+</html>
+
+
+   
